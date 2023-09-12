@@ -5,7 +5,17 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    fontFamily:{
+      'Barlow': ['Barlow Condensed', 'sans-serif'],
+      'Bellefair':['Bellefair', 'serif'],
+    },
+    extend: {
+      colors:{
+        primary: '#0B0D17',
+        secundary: '#D0D6F9',
+        terciary: '#FFFFFF',
+      }
+    },
   },
   plugins: [],
 }
