@@ -6,12 +6,12 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="relative ">
+        <div className="relative sm:flex">
             <Menu
                 style={{ transform: isOpen ? "translateX(0%)" : "translateX(100%)"}}
                 className=""
             >
-                <ul className="text-terciary font-Barlow font-normal pt-[6rem] pl-[2rem]">
+                <ul className=" sm:flex text-terciary font-Barlow font-normal pt-[6rem] pl-[2rem]">
                     <Link to="/">
                         <li className="mb-[1rem] tracking-[2.7px] uppercase">
                             <span className="mr-1 font-bold">00</span>Home
@@ -86,7 +86,7 @@ export default Header;
 const Menu = styled.div`
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(40px);
-  width: 65%;
+  width: 70%;
   height: 100vh;
   position: absolute;
   right: 0;
@@ -96,5 +96,7 @@ const Menu = styled.div`
   @media(min-width: 640px){
     position: relative;
     height: 100%;
+    transform: translateX(0%) !important;
+    
   }
 `;

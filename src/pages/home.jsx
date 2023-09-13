@@ -41,16 +41,39 @@ const BtnHome = styled.button`
   border-radius: 50%;
   height: 150px;
   width: 150px;
+  transition: all 0.3s;
   position: relative;
+  
 
   &::after{
     content: "";
-    background-color: red;
+    background-color: #FFFFFF;
     border-radius: 50%;
     height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
+    transition: all .5s;
+    
+  }
+
+  &:hover::after{
+    transform: scale(1.8);
+    opacity: 0.1036;
+  }
+
+  &:active::after{
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  &:hover{    
+    transform: translateY(0);
+  }
+
+  &:active{    
+    transform: translateY(0);
   }
 `;
