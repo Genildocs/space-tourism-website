@@ -17,10 +17,10 @@ export default function Home() {
                     back, and relax because we’ll give you a truly out of this world
                     experience!
                 </p>
-                <DivBtn className="bg-terciary flex justify-center  items-center">
-                    <button className="text-[1.25rem] text-primary font-Bellefair uppercase cursor-pointer">
+                <DivBtn className="flex justify-center  items-center">
+                    <BtnHome className="bg-terciary text-[1.25rem] text-primary font-Bellefair uppercase cursor-pointer">
                         Explore
-                    </button>
+                    </BtnHome>
                 </DivBtn>
             </div>
         </ContainerHome>
@@ -34,9 +34,23 @@ const ContainerHome = styled.div`
   background-position: center;
 `;
 
-const DivBtn = styled.div`
-  margin-top: 5rem;
+const DivBtn = styled.div``;
+
+const BtnHome = styled.button`
+  margin-top: 6rem;
   border-radius: 50%;
   height: 150px;
   width: 150px;
+  position: relative;
+
+  &::after{
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 `;
