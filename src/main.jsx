@@ -9,6 +9,7 @@ import Destination from "./pages/destination/destination.jsx";
 import Crew from "./pages/crew/crew.jsx";
 import Technology from "./pages/technology/technology.jsx";
 import Moon from "./pages/destination/lunes/moon.jsx";
+import Mars from "./pages/destination/lunes/mars.jsx";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -22,10 +23,18 @@ const router = createBrowserRouter([
             {
                 path: "/destination",
                 element: <Destination />,
-            },
-            {
-                path: "/destination/:id",
-                element: <Destination />,
+                children: [
+                    {
+                        path: "/destination/moon",
+                        element: <Moon />,
+                        
+                    },
+                    {
+                        path: "/destination/mars",
+                        element: <Mars />,
+                        
+                    }
+                ]
             },
             {
                 path: "/crew",

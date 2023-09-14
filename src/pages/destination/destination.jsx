@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import Header from "../../components/header.jsx";
 import PagesTitle from "../../components/pagesTitle.jsx";
 import data from "../../../data.json";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import Moon from "./lunes/moon.jsx";
 import Europa from "./lunes/europa.jsx";
 import Mars from "./lunes/mars.jsx";
@@ -16,10 +16,12 @@ export default function Destination() {
       <Header />
       <PagesTitle number={"01"} title={"Pick your destination"} />
       <div className="text-white">
-         <Link to="/destination/moon"><button >Moon</button></Link>         
+        
+         <Link to="/destination/moon"><button >Moon</button></Link>       
          <Link to="/destination/mars"><button>Mars</button></Link>
          <Link to="/destination/europa"><button>Europa</button></Link>
          <Link to="/destination/titan"><button>Titan</button></Link>
+         <Outlet />
       </div>
     </ContainerDestination>
   );
