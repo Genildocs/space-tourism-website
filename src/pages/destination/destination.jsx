@@ -15,13 +15,12 @@ export default function Destination() {
     <ContainerDestination className="bg-[url('../public/assets/destination/background-destination-mobile.jpg')] sm:bg-[url('../public/assets/destination/background-destination-tablet.jpg')] lg:bg-[url('../public/assets/destination/background-destination-desktop.jpg')]">
       <Header />
       <PagesTitle number={"01"} title={"Pick your destination"} />
-      <div className="text-white">
-        
+      <div className="text-white">        
          <Link to="/destination/moon"><button >Moon</button></Link>       
          <Link to="/destination/mars"><button>Mars</button></Link>
          <Link to="/destination/europa"><button>Europa</button></Link>
          <Link to="/destination/titan"><button>Titan</button></Link>
-         <Outlet />
+         
       </div>
     </ContainerDestination>
   );

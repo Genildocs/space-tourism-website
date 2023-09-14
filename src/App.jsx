@@ -1,17 +1,20 @@
-import {Outlet} from "react-router-dom";
-import styled from "@emotion/styled";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/home/home";
+import Destination from "./pages/destination/destination";
+import Error from "./pages/error/error";
 
 function App() {  
 
   return (
-    <Container>
-        <Outlet />
-    </Container>
+    <BrowserRouter>
+      <Routes>
+         <Route path="/" element={<Home />} />   
+         <Route path="/destination" element={<Destination />} />   
+         <Route path="*" element={<Error />} />    
+      </Routes>
+    </BrowserRouter>
   )
 }
 
 export default App
 
-const Container = styled.div`
-  min-height: 100vh;
-`
