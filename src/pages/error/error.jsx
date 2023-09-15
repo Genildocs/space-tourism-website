@@ -1,5 +1,10 @@
+import Motion from "../../components/motion"
 export default function Error(){
     return(
-        <h1>Erro 404</h1>
+        <div>
+            <h1>Erro 404</h1>
+            <Motion />
+        </div>
+        
     )
 }
