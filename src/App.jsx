@@ -4,8 +4,7 @@ import Destination from "./pages/destination/destination";
 import Crew from "./pages/crew/crew";
 import Technology from "./pages/technology/technology";
 import Error from "./pages/error/error";
-import Moon from "./pages/destination/lunes/moon";
-import Mars from "./pages/destination/lunes/mars";
+
 
 function App() {
 
