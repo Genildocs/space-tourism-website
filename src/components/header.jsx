@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
+import { motion } from "framer-motion";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -8,35 +9,51 @@ const Header = () => {
     return (
         <div className="relative sm:flex">
             <Menu
-                style={{ transform: isOpen ? "translateX(0%)" : "translateX(100%)"}}
+                style={{ transform: isOpen ? "translateX(0%)" : "translateX(100%)" }}
                 className=""
             >
-                <ul className=" sm:flex text-terciary font-Barlow font-normal pt-[6rem] pl-[2rem]">
+                <motion.ul className=" sm:flex text-terciary font-Barlow font-normal pt-[6rem] pl-[2rem]">
                     <Link to="/">
-                        <li className="mb-[1rem] tracking-[2.7px] uppercase">
+                        <motion.li className="mb-[1rem] tracking-[2.7px] uppercase"                            
+                            whileHover={{ opacity: 0.5 }}
+                            whileTap={{ opacity: 1 }}
+                        >
                             <span className="mr-1 font-bold">00</span>Home
-                        </li>
+                        </motion.li>
                     </Link>
                     <Link to="/destination">
-                        <li className="mb-[1rem] tracking-[2.7px] uppercase">
+                        <motion.li className="mb-[1rem] tracking-[2.7px] uppercase"
+                            whileHover={{ opacity: 0.5 }}
+                            whileTap={{ opacity: 1 }}
+                        >
                             <span className="mr-1 font-bold">01</span>Destination
-                        </li>
+                        </motion.li>
                     </Link>
                     <Link to="/crew">
-                        <li className="mb-[1rem] tracking-[2.7px] uppercase">
+                        <motion.li className="mb-[1rem] tracking-[2.7px] uppercase"
+                            whileHover={{ opacity: 0.5 }}
+                            whileTap={{ opacity: 1 }}
+                        >
                             <span className="mr-1  font-bold">02</span>Crew
-                        </li>
+                        </motion.li>
                     </Link>
                     <Link to="/technology">
-                        <li className="mb-[1rem] tracking-[2.7px] uppercase">
+                        <motion.li className="mb-[1rem] tracking-[2.7px] uppercase"
+                            whileHover={{ opacity: 0.5 }}
+                            whileTap={{ opacity: 1 }}
+                        >
                             <span className="mr-1 f font-bold ">03</span>Technology
-                        </li>
+                        </motion.li>
                     </Link>
-                </ul>
+                </motion.ul>
             </Menu>
 
-            <div className="p-5 flex items-center justify-between ">
-                <div>
+            <div className="p-5 flex items-center justify-between">
+                <motion.div
+                    initial={{ y: -50, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 1 }}
+                >
                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
                         <g fill="none" fillRule="evenodd">
                             <circle cx="24" cy="24" r="24" fill="#FFF" />
@@ -46,7 +63,7 @@ const Header = () => {
                             />
                         </g>
                     </svg>
-                </div>
+                </motion.div>
                 <div className="z-50">
                     <button onClick={() => setIsOpen(!isOpen)}>
                         {!isOpen && (
@@ -93,10 +110,9 @@ const Menu = styled.div`
   z-index: 1;
   transition: transform 0.9s linear;
 
-  @media(min-width: 640px){
+  @media (min-width: 640px) {
     position: relative;
     height: 100%;
     transform: translateX(0%) !important;
-    
   }
 `;

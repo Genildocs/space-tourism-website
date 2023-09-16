@@ -3,7 +3,7 @@ import Moon from "../../public/assets/destination/image-moon.png";
 import Mars from "../../public/assets/destination/image-mars.png";
 import Europa from "../../public/assets/destination/image-europa.png";
 import Titan from "../../public/assets/destination/image-titan.png";
-import { motion } from "framer-motion";
+
 
 const LinkLunes = ({selectedMoon, setSelectedMoon}) => {
     
@@ -19,17 +19,17 @@ const LinkLunes = ({selectedMoon, setSelectedMoon}) => {
                 <Image
                     className={selectedMoon === "Mars" ? "block" : "hidden"}
                     src={Mars}
-                    alt="Moon"
+                    alt="Mars"
                 />
                 <Image
                     className={selectedMoon === "Europa" ? "block" : "hidden"}
                     src={Europa}
-                    alt="Moon"
+                    alt="Europa"
                 />
                 <Image
                     className={selectedMoon === "Titan" ? "block" : "hidden"}
                     src={Titan}
-                    alt="Moon"
+                    alt="Titan"
                 />
             </div>
             <ul className="flex justify-center gap-5 text-white mt-10">

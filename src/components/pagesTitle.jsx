@@ -1,11 +1,13 @@
 import styled from "@emotion/styled";
+import { motion } from "framer-motion";
+
 
 const PagesTitle = ({number, title}) =>{
 
     return(
-        <>
+        <motion.div>
             <Title><span className="text-secundary font-bold">{number}</span>{title}</Title>
-        </>
+        </motion.div>
     )
 }
 
