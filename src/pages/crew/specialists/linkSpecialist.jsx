@@ -8,9 +8,9 @@ const LinkSpecialist = ({ selecSpecialist, setSelectSpecialist }) => {
     
     const classSelect = (specialist) => {
         if (selecSpecialist === specialist) {
-            return "h-[20px] w-[20px] bg-white rounded-full mr-4";
+            return "h-[20px] w-[20px] bg-white rounded-full mr-4 !opacity-100";
         } else {
-            return "h-[20px] w-[20px] bg-white rounded-full mr-4 opacity-20";
+            return "h-[20px] w-[20px] bg-white rounded-full mr-4  opacity-20 ";
         }
     };
 
@@ -53,21 +53,25 @@ const LinkSpecialist = ({ selecSpecialist, setSelectSpecialist }) => {
             <div className="mt-10 flex justify-center">
                 <motion.button
                     className={`${classSelect("Commander")}`}
+                    whileHover={{opacity: 1}}
                     onClick={() => setSelectSpecialist("Commander")}
                 ></motion.button>
 
                 <motion.button
                     className={`${classSelect("MissionSpecialist")}`}
+                    whileHover={{opacity: 1}}
                     onClick={() => setSelectSpecialist("MissionSpecialist")}
                 ></motion.button>
 
                 <motion.button
                     className={`${classSelect("Pilot")}`}
+                    whileHover={{opacity: 1}}
                     onClick={() => setSelectSpecialist("Pilot")}
                 ></motion.button>
 
                 <motion.button
                     className={`${classSelect("FlightEngineer")}`}
+                    whileHover={{opacity: 1}}
                     onClick={() => setSelectSpecialist("FlightEngineer")}
                 ></motion.button>
             </div>
