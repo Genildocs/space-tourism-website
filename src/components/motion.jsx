@@ -1,26 +1,18 @@
-import { motion } from "framer-motion";
+import { motion , useMotionValue, useTransform, animate} from "framer-motion";
+import { useEffect } from "react";
+
 const Motion =() =>{
-
-    return(
-        <>
-            <motion.div style={{
-                background: 'red',
-                height: 150,
-                width: 150,
-                borderRadius: 100,
-            }}            
-            animate={{
-                translateY: [0, 100, 0],
-                translateX: [0, 100, 0]
-            }}
-            transition={{duration: 10}}        
-            >
-                
-            </motion.div>
-
-        </>
-    )
-
+    const count = useMotionValue(0)
+    const rounded = useTransform(count, latest => Math.round(latest))
+    
+    useEffect(() => {
+      const controls = animate(count, 100, {duration: 10})
+    
+      return controls.stop
+    }, [])
+    
+    return <motion.div className=" text-[2rem]">{rounded}</motion.div>
+    
 } 
 
 export default Motion;

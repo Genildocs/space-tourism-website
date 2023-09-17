@@ -13,4 +13,7 @@ const obj =[{
 }
 ]
 
-console.log(obj)
+obj.map((item)=>{
+  if(item.name === 'Mars') console.log(item)
+  console.log(item)
+})

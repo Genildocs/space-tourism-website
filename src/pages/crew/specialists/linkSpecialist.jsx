@@ -1,26 +1,76 @@
 import { motion } from "framer-motion";
 import Commander from "../../../../public/assets/crew/image-douglas-hurley.png";
-const LinkSpecialist = () => {
+import MissionSpecialist from "../../../../public/assets/crew/image-mark-shuttleworth.png";
+import Pilot from "../../../../public/assets/crew/image-victor-glover.png";
+import FlightEnginer from "../../../../public/assets/crew/image-anousheh-ansari.png";
+
+const LinkSpecialist = ({ selecSpecialist, setSelectSpecialist }) => {
     
-    
+    const classSelect = (specialist) => {
+        if (selecSpecialist === specialist) {
+            return "h-[20px] w-[20px] bg-white rounded-full mr-4";
+        } else {
+            return "h-[20px] w-[20px] bg-white rounded-full mr-4 opacity-20";
+        }
+    };
+
     return (
         <div>
-            <motion.div
+            <div
                 className="flex justify-center ml-[2rem] mr-[2rem]"
                 style={{
-                    borderBottom: "0.5px solid #D0D6F9",
+                    borderBottom: "0.3px solid #adb6da",
                 }}
-               
             >
                 <motion.img
                     src={Commander}
-                    alt="commander Douglas Hurley"
-                    className="w-[11rem] h-[13.7rem]"
-                    
+                    alt="Commander douglas-hurley"
+                    className={`${selecSpecialist === "Commander" ? "block" : "hidden"
+                        }   w-[11rem] h-[13.7rem]`}
+                />
+                <motion.img
+                    src={MissionSpecialist}
+                    alt="Mission Specialist mark-shuttleworth"
+                    className={`${selecSpecialist === "MissionSpecialist" ? "block" : "hidden"
+                        }   w-[9.5rem] h-[13.7rem]`}
                 />
 
-                
-            </motion.div>
+                <motion.img
+                    src={Pilot}
+                    alt="Pilot victor-glover"
+                    className={`${selecSpecialist === "Pilot" ? "block" : "hidden"
+                        }   w-[11rem] h-[13.7rem]`}
+                />
+
+                <motion.img
+                    src={FlightEnginer}
+                    alt="Flight Enginer anousheh-ansari"
+                    className={`${selecSpecialist === "FlightEngineer" ? "block" : "hidden"
+                        }   w-[11rem] h-[13.7rem]`}
+                />
+            </div>
+
+            <div className="mt-10 flex justify-center">
+                <motion.button
+                    className={`${classSelect("Commander")}`}
+                    onClick={() => setSelectSpecialist("Commander")}
+                ></motion.button>
+
+                <motion.button
+                    className={`${classSelect("MissionSpecialist")}`}
+                    onClick={() => setSelectSpecialist("MissionSpecialist")}
+                ></motion.button>
+
+                <motion.button
+                    className={`${classSelect("Pilot")}`}
+                    onClick={() => setSelectSpecialist("Pilot")}
+                ></motion.button>
+
+                <motion.button
+                    className={`${classSelect("FlightEngineer")}`}
+                    onClick={() => setSelectSpecialist("FlightEngineer")}
+                ></motion.button>
+            </div>
         </div>
     );
 };
