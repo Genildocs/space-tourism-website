@@ -12,6 +12,9 @@ export default function Technology() {
       <PagesTitle number={"03"} title={"SPACE LAUNCH 101"} />
       <Images selecTech={selecTech}/>
       <Buttons selecTech={selecTech} setSelecTech={setSelecTech} />
+      <div>
+        <h1 className=" font-Barlow text-center font-normal text-secundary mt-[2rem]">THE TERMINOLOGY…</h1>
+      </div>
       <Description selecTech={selecTech} />
     </div>
   );
