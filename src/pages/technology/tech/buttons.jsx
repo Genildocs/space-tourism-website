@@ -8,7 +8,7 @@ const Buttons = ({selecTech, setSelecTech}) => {
             return "text-terciary mr-[1rem] h-[40px] w-[40px] rounded-full tracking-[1px] border-2 border-solid border-white"
         }
     }
-    console.log(btnSelect())
+
     return (
         <div className="text-white flex justify-center">
             <div>

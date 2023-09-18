@@ -24,7 +24,7 @@ const Specialist = ({ selecSpecialist, setSelectSpecialist }) => {
                         </div>
 
                         <div>
-                            <p className="text-secundary font-Barlow leading-[1.6rem]">
+                            <p className="text-secundary font-Barlow leading-[1.6rem] pb-1">
                                 {selecSpecialist === people.role.replace(" ", "")
                                     ? people.bio
                                     : ""}

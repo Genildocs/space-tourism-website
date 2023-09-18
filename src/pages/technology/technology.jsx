@@ -10,9 +10,9 @@ export default function Technology() {
     <div className="bg-[url('../public/assets/technology/background-technology-mobile.jpg')] sm:bg-[url('../public/assets/technology/background-technology-tablet.jpg')] lg:bg-[url('../public/assets/technology/background-technology-desktop.jpg')] bg-no-repeat bg-cover min-h-screen">
       <Header />
       <PagesTitle number={"03"} title={"SPACE LAUNCH 101"} />
-      <Images />
+      <Images selecTech={selecTech}/>
       <Buttons selecTech={selecTech} setSelecTech={setSelecTech} />
-      <Description />
+      <Description selecTech={selecTech} />
     </div>
   );
 }

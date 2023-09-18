@@ -104,7 +104,7 @@ const Menu = styled.div`
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(40px);
   width: 70%;
-  height: 100vh;
+  min-height: 100vh;
   position: absolute;
   right: 0;
   z-index: 1;

@@ -1,4 +1,4 @@
-const Description = () =>{
+const Description = ({selecTech}) =>{
 
     return(
 
