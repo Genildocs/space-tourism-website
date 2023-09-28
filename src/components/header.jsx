@@ -8,7 +8,6 @@ const Header = () => {
 
   const handleIsOpen = () => {
     setIsOpen(!isOpen);
-    document.body.classList.toggle("truncate");
   };
 
   return (
