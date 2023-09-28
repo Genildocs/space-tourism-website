@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-   overflow: hidden;
-}
-
-
 /*
 font-family: 'Barlow Condensed', sans-serif;
 font-family: 'Bellefair', serif;
