@@ -5,13 +5,13 @@ export default function Home() {
     <ContainerHome className="bg-[url('../public/assets/home/background-home-mobile.jpg')] sm:bg-[url('../public/assets/home/background-home-tablet.jpg')] lg:bg-[url('../public/assets/home/background-home-desktop.jpg')]">
       <Header />
       <div className="text-terciary  p-5 flex flex-col items-center  ">
-        <p className="font-normal font-Barlow text-secundary tracking-[2.7px]">
+        <p className="font-normal font-Barlow text-secundary tracking-[2.7px] sm:text-[1.6rem] sm:mb-5 sm:mt-[6rem]">
           SO, YOU WANT TO TRAVEL TO
         </p>
-        <h1 className="text-[5rem] leading-[6.25rem] py-4 font-normal font-Bellefair">
+        <h1 className="text-[5rem] sm:text-[10rem] leading-[6.25rem] py-4 font-normal font-Bellefair">
           SPACE
         </h1>
-        <p className="text-[0.9rem] font-normal font-Barlow text-secundary text-center leading-6">
+        <p className="text-[0.9rem] sm:text-[1rem] sm:w-[75%] font-normal font-Barlow text-secundary text-center leading-6">
           Let’s face it; if you want to go to space, you might as well genuinely
           go to outer space and not hover kind of on the edge of it. Well sit
           back, and relax because we’ll give you a truly out of this world
@@ -44,7 +44,13 @@ const BtnHome = styled.button`
   width: 150px;
   transition: all 0.3s;
   position: relative;
-
+  
+  @media(min-width: 640px){
+    height: 242px;
+    width: 242px;
+    font-size: 2rem;
+  }
+  
   &::after {
     content: "";
     background-color: #ffffff;

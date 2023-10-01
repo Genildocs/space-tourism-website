@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
-import Moon from "../../public/assets/destination/image-moon.png";
-import Mars from "../../public/assets/destination/image-mars.png";
-import Europa from "../../public/assets/destination/image-europa.png";
-import Titan from "../../public/assets/destination/image-titan.png";
+import Moon from "/assets/destination/image-moon.png";
+import Mars from "/assets/destination/image-mars.png";
+import Europa from "/assets/destination/image-europa.png";
+import Titan from "/assets/destination/image-titan.png";
 
 
 const LinkLunes = ({selectedMoon, setSelectedMoon}) => {
@@ -34,16 +34,16 @@ const LinkLunes = ({selectedMoon, setSelectedMoon}) => {
             </div>
             <ul className="flex justify-center gap-5 text-white mt-10">
                 <LinkOne>
-                    <button onClick={()=>setSelectedMoon("Moon")} className="uppercase tracking-[2.7px]">Moon</button>
+                    <button onClick={()=>setSelectedMoon("Moon")} className="sm:text-[1.5rem] uppercase tracking-[2.7px]">Moon</button>
                 </LinkOne>
                 <Links>
-                    <button onClick={()=>setSelectedMoon("Mars")} className="uppercase tracking-[2.7px]">Mars</button>
+                    <button onClick={()=>setSelectedMoon("Mars")} className="sm:text-[1.5rem] uppercase tracking-[2.7px]">Mars</button>
                 </Links>
                 <Links>
-                    <button onClick={()=>setSelectedMoon("Europa")} className="uppercase tracking-[2.7px]">Europa</button>
+                    <button onClick={()=>setSelectedMoon("Europa")} className="sm:text-[1.5rem] uppercase tracking-[2.7px]">Europa</button>
                 </Links>
                 <Links>
-                    <button onClick={()=>setSelectedMoon("Titan")} className="uppercase tracking-[2.7px]">Titan</button>
+                    <button onClick={()=>setSelectedMoon("Titan")} className="sm:text-[1.5rem] uppercase tracking-[2.7px]">Titan</button>
                 </Links>
             </ul>
         </div>
@@ -92,5 +92,10 @@ const Links = styled.li`
 const Image = styled.img`
     height: 16rem;
     margin: 16rem;
-    margin: 0 auto;   
+    margin: 0 auto; 
+  
+  @media(min-width: 640px){
+    height: 31rem;
+    width: 31rem;
+  }
 `;

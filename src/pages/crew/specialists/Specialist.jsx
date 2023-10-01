@@ -6,7 +6,7 @@ const Specialist = ({ selecSpecialist, setSelectSpecialist }) => {
         <div>
             <div className="text-white">
                 {data.crew.map((people) => (
-                    <div key={people.name} className="mt-8 text-center ml-[2rem] mr-[2rem]">
+                    <div key={people.name} className="mt-8 sm:mt-0 text-center ml-[2rem] mr-[2rem]">
                         <div className="">
                             <h1 className="uppercase font-Bellefair opacity-50">
                                 {selecSpecialist === people.role.replace(" ", "")

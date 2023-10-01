@@ -12,48 +12,51 @@ const Header = () => {
 
   return (
     <div className="relative sm:flex sm:flex-row-reverse sm:justify-between">
-        <Menu className={`${isOpen ? 'block' : 'hidden'} min-h-screen w-[70%] sm:flex sm:items-center sm:min-h-full absolute sm:block sm:relative`}
-        >
-          <motion.ul className=" sm:flex text-terciary font-Barlow font-normal pt-[6rem] sm:pt-[0] pl-[2rem]">
-            <Link to="/" className="mr-[1rem]">
-              <motion.li
-                className="mb-[1rem] tracking-[2.7px] uppercase"
-                whileHover={{ opacity: 0.5 }}
-                whileTap={{ opacity: 1 }}
-              >
-                <span className="mr-1 font-bold">00</span>Home
-              </motion.li>
-            </Link>
-            <Link to="/destination " className="mr-[1rem]">
-              <motion.li
-                className="mb-[1rem] tracking-[2.7px] uppercase"
-                whileHover={{ opacity: 0.5 }}
-                whileTap={{ opacity: 1 }}
-              >
-                <span className="mr-1 font-bold">01</span>Destination
-              </motion.li>
-            </Link>
-            <Link to="/crew" className="mr-[1rem]">
-              <motion.li
-                className="mb-[1rem] tracking-[2.7px] uppercase"
-                whileHover={{ opacity: 0.5 }}
-                whileTap={{ opacity: 1 }}
-              >
-                <span className="mr-1  font-bold">02</span>Crew
-              </motion.li>
-            </Link>
-            <Link to="/technology">
-              <motion.li
-                className="mb-[1rem] tracking-[2.7px] uppercase"
-                whileHover={{ opacity: 0.5 }}
-                whileTap={{ opacity: 1 }}
-              >
-                <span className="mr-1 f font-bold ">03</span>Technology
-              </motion.li>
-            </Link>
-          </motion.ul>
-        </Menu>
-
+      <Menu
+        className={`${isOpen ? "block" : "hidden"
+          } min-h-screen w-[70%] sm:flex sm:items-center sm:min-h-full absolute sm:block sm:relative`}
+      >
+        <motion.ul className=" sm:flex text-terciary font-Barlow font-normal pt-[6rem] sm:pt-[0] pl-[2rem] sm:pl-[4rem]">
+          <Link to="/" className="mr-[1rem]">
+            <motion.li
+              className="mb-[1rem] tracking-[2.7px] uppercase"
+              whileHover={{ opacity: 0.5 }}
+              whileTap={{ opacity: 1 }}
+            >
+              <span className="mr-1 font-bold sm:hidden lg:block">00</span>Home
+            </motion.li>
+          </Link>
+          <Link to="/destination " className="mr-[1rem]">
+            <motion.li
+              className="mb-[1rem] tracking-[2.7px] uppercase"
+              whileHover={{ opacity: 0.5 }}
+              whileTap={{ opacity: 1 }}
+            >
+              <span className="mr-1 font-bold sm:hidden lg:block">01</span>
+              Destination
+            </motion.li>
+          </Link>
+          <Link to="/crew" className="mr-[1rem]">
+            <motion.li
+              className="mb-[1rem] tracking-[2.7px] uppercase"
+              whileHover={{ opacity: 0.5 }}
+              whileTap={{ opacity: 1 }}
+            >
+              <span className="mr-1  font-bold sm:hidden lg:block">02</span>Crew
+            </motion.li>
+          </Link>
+          <Link to="/technology">
+            <motion.li
+              className="mb-[1rem] tracking-[2.7px] uppercase"
+              whileHover={{ opacity: 0.5 }}
+              whileTap={{ opacity: 1 }}
+            >
+              <span className="mr-1 f font-bold sm:hidden lg:block">03</span>
+              Technology
+            </motion.li>
+          </Link>
+        </motion.ul>
+      </Menu>
 
       <div className="p-5 flex items-center justify-between">
         <motion.div
@@ -109,8 +112,7 @@ export default Header;
 
 const Menu = styled.div`
   background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(40px);    
+  backdrop-filter: blur(40px);
   right: 0;
   z-index: 1;
-  
 `;

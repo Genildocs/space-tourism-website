@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const PagesTitle = ({number, title}) =>{
 
     return(
-        <motion.div>
+        <motion.div className="text-lg">
             <Title><span className="text-secundary font-bold">{number}</span>{title}</Title>
         </motion.div>
     )
@@ -23,5 +23,10 @@ const Title = styled.h1`
     justify-content: center;
     gap: 0.5rem;
     margin: 2rem 0;
+  
+  @media(min-width: 640px){
+    justify-content: start;
+    margin-left: 2rem;
+  }
 
 `
